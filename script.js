@@ -34,3 +34,33 @@ document.querySelector("#font-size").addEventListener("input", function () {
 document.querySelector("#text-color").addEventListener("input", function () {
   h1.style.color = this.value;
 });
+
+document.querySelector("#font-family").addEventListener("change", function () {
+  h1.style.fontFamily = this.value;
+});
+
+document.querySelector("#text-bold").addEventListener("change", function () {
+  if (this.checked) {
+    h1.style.fontWeight = "bold";
+  } else {
+    h1.style.fontWeight = "normal";
+  }
+});
+
+document.querySelector("#text-italic").addEventListener("change", function () {
+  if (this.checked) {
+    h1.style.fontStyle = "italic";
+  } else {
+    h1.style.fontStyle = "normal";
+  }
+});
+
+document
+  .querySelector("#text-underline")
+  .addEventListener("change", function () {
+    if (this.checked) {
+      h1.style.textDecoration = "underline";
+    } else {
+      h1.style.textDecoration = "normal";
+    }
+  });
